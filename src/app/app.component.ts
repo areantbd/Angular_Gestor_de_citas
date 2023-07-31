@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gestor-de-citas';
+  listaCitas: any[] = []
+
+  @Input()  
+
+  anadirCita(cita: any) {
+    console.log("he entrado")
+    console.log(cita)
+    this.listaCitas.push(cita)
+    console.log(this.listaCitas)
+  }
 }

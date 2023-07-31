@@ -2,7 +2,7 @@
   <h1 class="text-center title">Gestor de citas</h1>
   <div class="row mt-4">
     <div class="col-6">
-      <app-crear-citas></app-crear-citas>
+      <app-crear-citas (nuevaCita)="anadirCita($event)"></app-crear-citas>
     </div>
     <div class="col-6">
       <app-list-citas></app-list-citas>
