@@ -6,7 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listaCitas: any[] = []
+  listaCitas: any[] = [
+    {nombre: "Iván", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
+    {nombre: "Iván2", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
+    {nombre: "Iván3", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
+    {nombre: "Iván4", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"}
+  ]
 
   @Input()  
 
@@ -14,6 +19,11 @@ export class AppComponent {
     console.log("he entrado")
     console.log(cita)
     this.listaCitas.push(cita)
+    console.log(this.listaCitas)
+  }
+
+  eliminarCita(index: number) {
+    this.listaCitas.splice(index, 1)
     console.log(this.listaCitas)
   }
 }

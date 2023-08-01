@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list-citas',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-citas.component.css']
 })
 export class ListCitasComponent {
+  @Input() listadoCitas: any
+  @Output() borrarCita = new EventEmitter<number>()
+  
 
+  eliminarCita(index: number):void {
+    this.borrarCita.emit(index)
+  }
 }
