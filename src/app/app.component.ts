@@ -6,12 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listaCitas: any[] = [
-    {nombre: "Iván", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
-    {nombre: "Iván2", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
-    {nombre: "Iván3", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"},
-    {nombre: "Iván4", fecha: "19/04/2022", hora: "18:05", sintomas: "maula"}
-  ]
+  listaCitas: any[] = []
 
   @Input()  
 
