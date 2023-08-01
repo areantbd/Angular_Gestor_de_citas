@@ -6,19 +6,20 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listaCitas: any[] = []
+  listaCitas: any[] = [
+    // {nombre: "Test", fecha: "19/04/2022", hora: "18:05", sintomas: "test"},
+    // {nombre: "Test2", fecha: "19/04/2022", hora: "18:05", sintomas: "test"},
+    // {nombre: "Test3", fecha: "19/04/2022", hora: "18:05", sintomas: "test"},
+    // {nombre: "Test4", fecha: "19/04/2022", hora: "18:05", sintomas: "test"}
+  ]
 
   @Input()  
 
   anadirCita(cita: any) {
-    console.log("he entrado")
-    console.log(cita)
     this.listaCitas.push(cita)
-    console.log(this.listaCitas)
   }
 
   eliminarCita(index: number) {
     this.listaCitas.splice(index, 1)
-    console.log(this.listaCitas)
   }
 }

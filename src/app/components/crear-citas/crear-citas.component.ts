@@ -28,7 +28,7 @@ export class CrearCitasComponent {
       hora: this.hora,
       sintomas: this.sintomas
     }
-    // console.log(CITA)
+    
     this.nuevaCita.emit(CITA)
     this.limpiarFormulario()
   }
